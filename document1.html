@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <style type="text/css">
+    	body{
+    		margin: 0;
+    		padding: 0;
+    	}
+    	h1, p {
+    		margin: 10px;
+    	}
+    	section{
+    		overflow: hidden;
+    	}
+    </style>
+    
+  </head>
+
+  <body>
+
+    <div style="position: fixed; top: 20px; right: 25px;">
+    	<button onclick="scrollUp(100);">Up</button>
+    	<button onclick="scrollDown(100);">Down</button>
+    </div>
+
+    <script type="text/javascript">
+	    function scrollUp () {
+			window.scrollBy(0, document.documentElement.clientHeight*-1);
+			console.log (document.documentElement.clientHeight);
+		};
+	    function scrollDown () {
+			window.scrollBy(0, document.documentElement.clientHeight*+1);
+		};
+
+    </script>
+<section style="height: 100vh; background: red;">
+
+    <div class="container">
+
+      <div class="starter-template">
+        <h1>Портфолио</h1>
+        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+      </div>
+
+    </div><!-- /.container -->	
+
+</section><section style="height: 100vh; background: yellow;">
+	
+    <div class="container">
+
+      <div class="starter-template">
+        <h1>Навыки или что я умею</h1>
+        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+      </div>
+
+    </div><!-- /.container -->		
+</section>
+<section style="height: 100vh; background: green;">
+    <div class="container">
+
+      <div class="starter-template">
+        <h1>Примеры работ</h1>
+        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+      </div>
+
+    </div><!-- /.container -->	
+</section>
+<section style="height: 100vh; background: blue;">
+    <div class="container">
+
+      <div class="starter-template">
+        <h1>Контакты</h1>
+        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+      </div>
+
+    </div><!-- /.container -->	
+</section>
+
+  </body>
+</html>

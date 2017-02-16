@@ -14,6 +14,8 @@
     		overflow: hidden;
     	}
     </style>
+    <link rel="stylesheet" type="text/css" href="calculator.css">
+	<script type="text/javascript" src="calculator.js"></script>
     
   </head>
 
@@ -34,7 +36,7 @@
 		};
 
     </script>
-<section style="height: 100vh; background: red;">
+<section style="height: 100vh; background: yellow;">
 
     <div class="container">
 
@@ -42,10 +44,24 @@
         <h1>Портфолио</h1>
         <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
       </div>
+      <div class="calculator" style="margin: 10px;">
+      	<input type="text" name="" id="number1" class="input" autofocus>
 
+	<div class="operators">
+		<div class="operator" id="plus" onclick="operand='plus'; changeBackground(operand);">+</div>
+		<div class="operator" id="minus" onclick="operand='minus'; changeBackground(operand);">&#8211;</div>
+		<div class="operator" id="multiple" onclick="operand='multiple'; changeBackground(operand);">&#215;</div>
+		<div class="operator" id="divide" onclick="operand='divide'; changeBackground(operand);">&#247;</div>
+	</div>
+
+	<input type="text" name="" id="number2" class="input">
+
+	<div class="operator-equal" id="equal" onclick="calc(operand);">&#61;</div>
+	<div id="result"></div>
+      </div>
     </div><!-- /.container -->	
 
-</section><section style="height: 100vh; background: yellow;">
+</section><section style="height: 100vh; background: red;">
 	
     <div class="container">
 

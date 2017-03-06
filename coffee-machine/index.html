@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Coffee Machine</title>
+	<link rel="stylesheet" type="text/css" href="css/coffee-machine.css">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/jquery-ui.min.js"></script>
+</head>
+<body id="body">
+	<div id="wallet">
+	<div class="wallet-header">
+		<div class="wallet-inscription">
+			Wallet
+		</div>
+	</div>
+	<div id="wallet_content">
+		
+	</div>
+	</div>
+	<div class="content">
+		<div id="drinks">
+			<div class="div-header">Choose a premium drink:</div>
+		</div>
+		<div id="sugar">
+			<div class="div-header">Select an amount of sugar:</div>
+			<div>
+				<div class="sugar-amount" id="sugar-little" onclick="sugarAmountId = 'sugar-little'; sugarAmount = 'little&nbsp;sweet'; sugarPrice = 0; changeBackground('sugar-amount', 'sugar-little');">Little sweet</div>
+				<div class="sugar-amount" id="sugar-middle" onclick="sugarAmountId = 'sugar-middle'; sugarAmount = 'middle&nbsp;sweet'; sugarPrice = 0.10; changeBackground('sugar-amount', 'sugar-middle');">Middle sweet</div>
+				<div class="sugar-amount" id="sugar-many" onclick="sugarAmountId = 'sugar-many'; sugarAmount = 'very&nbsp;sweet'; sugarPrice = 0.20; changeBackground('sugar-amount', 'sugar-many');">Very sweet</div>
+			</div>
+		</div>
+		<div id="number-of-cups">
+			<div class="div-header">Select the number of cups:</div>
+			<div class="number-of-cups-choose">
+				<div class="left" onclick="if (numberOfCups > 1){numberOfCups = numberOfCups - 1}; document.getElementById('number-of-cups-value').innerHTML = numberOfCups; functionOrder();"></div>
+				<div id="number-of-cups-value"></div>
+				<div class="right" onclick="if (numberOfCups < 9){numberOfCups = numberOfCups + 1}; document.getElementById('number-of-cups-value').innerHTML = numberOfCups; functionOrder();"></div>
+			</div>
+		</div>
+		<!-- <div class="red-button" onclick="functionOrder(); functionOrderPrice();">Order coffee</div> -->
+		<div id="order-info">
+			<div id="order-name"></div>
+			<div id="order-sum"></div>
+		</div>
+		<div id="pay">
+			<div id="red-button" onclick="addWallet()">Pay for coffee</div>
+		</div>
+		<div id="paid">
+
+		</div>
+		<div id="cash">
+
+		</div>
+		<div id="result"></div>
+	</div><!-- Конец главного блока! Не трогать!-->
+	<script type="text/javascript" src="js/coffee-machine.js"></script>
+</body>
+</html>

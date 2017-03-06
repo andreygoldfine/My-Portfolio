@@ -5,7 +5,8 @@ function changeBackground(operand) {
   document.getElementById("divide").style.background = "orange";
   document.getElementById(operand).style.background = "red";
   document.getElementById("number2").focus();
-  if (typeof Number2 !=="undefined") {
+  var Number2 = parseFloat(document.getElementById("number2").value);
+  if (Number2 || Number2 === 0) {
     calc(operand);
   };
 }

@@ -78,7 +78,7 @@ function CoffeeMachine() {
 			document.getElementById('number-of-cups-value').innerHTML = this.numberOfCups;
 			coffee.functionOrder();
 		} else if (moreOrLess == "more" && !this.sum) {
-			if (this.numberOfCups < 9){
+			if (this.numberOfCups < 5){
 				this.numberOfCups = this.numberOfCups + 1;	
 			}
 			document.getElementById('number-of-cups-value').innerHTML = this.numberOfCups;

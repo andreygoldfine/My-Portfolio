@@ -5,8 +5,14 @@
 	<link rel="stylesheet" type="text/css" href="css/coffee-machine.css">
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="//ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/coffee-machine-class.js"></script>
 </head>
 <body id="body">
+	<script>
+		CoffeeMachine.prototype.global = this;
+		coffee = new CoffeeMachine();
+		wallet = new Wallet();
+	</script>
 	<div id="wallet">
 	<div class="wallet-header">
 		<div class="wallet-inscription">
@@ -24,17 +30,17 @@
 		<div id="sugar">
 			<div class="div-header">Select an amount of sugar:</div>
 			<div>
-				<div class="sugar-amount" id="sugar-little" onclick="sugarAmountId = 'sugar-little'; sugarAmount = 'little&nbsp;sweet'; sugarPrice = 0; changeBackground('sugar-amount', 'sugar-little');">Little sweet</div>
-				<div class="sugar-amount" id="sugar-middle" onclick="sugarAmountId = 'sugar-middle'; sugarAmount = 'middle&nbsp;sweet'; sugarPrice = 0.10; changeBackground('sugar-amount', 'sugar-middle');">Middle sweet</div>
-				<div class="sugar-amount" id="sugar-many" onclick="sugarAmountId = 'sugar-many'; sugarAmount = 'very&nbsp;sweet'; sugarPrice = 0.20; changeBackground('sugar-amount', 'sugar-many');">Very sweet</div>
+				<div class="sugar-amount" id="sugar-little" onclick="coffee.functionSugarAmount('sugar-little');">Little sweet</div>
+				<div class="sugar-amount" id="sugar-middle" onclick="coffee.functionSugarAmount('sugar-middle');">Middle sweet</div>
+				<div class="sugar-amount" id="sugar-many" onclick="coffee.functionSugarAmount('sugar-many');">Very sweet</div>
 			</div>
 		</div>
 		<div id="number-of-cups">
 			<div class="div-header">Select the number of cups:</div>
 			<div class="number-of-cups-choose">
-				<div class="left" onclick="if (numberOfCups > 1){numberOfCups = numberOfCups - 1}; document.getElementById('number-of-cups-value').innerHTML = numberOfCups; functionOrder();"></div>
+				<div class="left" onclick="coffee.editNumberOfCups('less');"></div>
 				<div id="number-of-cups-value"></div>
-				<div class="right" onclick="if (numberOfCups < 9){numberOfCups = numberOfCups + 1}; document.getElementById('number-of-cups-value').innerHTML = numberOfCups; functionOrder();"></div>
+				<div class="right" onclick="coffee.editNumberOfCups('more');"></div>
 			</div>
 		</div>
 		<!-- <div class="red-button" onclick="functionOrder(); functionOrderPrice();">Order coffee</div> -->
@@ -43,17 +49,22 @@
 			<div id="order-sum"></div>
 		</div>
 		<div id="pay">
-			<div id="red-button" onclick="addWallet()">Pay for coffee</div>
+			<div id="red-button" onclick="wallet.addWallet()">Pay for coffee</div>
 		</div>
-		<div id="paid">
-
-		</div>
-		<div id="cash">
-
-		</div>
+		<div id="paid"></div>
 		<div id="result"></div>
-	</div><!-- Конец главного блока! Не трогать!-->
-	<script type="text/javascript" src="js/coffee-machine.js"></script>
-	<!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter43276589 = new Ya.Metrika({ id:43276589, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/43276589" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+		<div id="cups">
+			<center>
+				<div id="cups-output">
+
+				</div>
+			</center>
+		</div>
+		<div id="change">
+
+		</div>
+		
+	</div>
+	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

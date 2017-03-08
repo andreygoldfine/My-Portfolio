@@ -12,6 +12,7 @@ body {
 #wallet {
 	width: 430px;
 	height: 332px;
+	overflow: hidden;
 	background-color: #DCDCDC;
 	position: absolute;
 	border-radius: 10px;
@@ -188,7 +189,27 @@ body {
 	display: none;
 	overflow: hidden;
 }
-#paid, #cash, #result {
+#paid, #change, #result {
 	margin: 5px;
 	text-align: center;
 }
+#cups {
+	width: 480px;
+	overflow: hidden;
+}
+
+#cups-output {
+	margin: 0 auto;
+	display: inline-block;
+}
+.final-cup {
+	margin: 5px;
+	border-top: 100px solid #dcdcdc;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	outline: 3px solid transparent;
+	height: 0;
+	width: 40px;
+	float: left;
+	border-radius: 5px 5px 15px 15px;
+} 

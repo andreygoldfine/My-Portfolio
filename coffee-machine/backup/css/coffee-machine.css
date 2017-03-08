@@ -1,0 +1,193 @@
+body {
+	padding: 0;
+	margin: 0;
+	font-family: Arial;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+/*wallet (draggable) Beginning*/
+#wallet {
+	width: 430px;
+	background-color: #DCDCDC;
+	position: absolute;
+	border-radius: 10px;
+	display: none;
+	bottom: 50px;
+	right: 50px;
+}
+#wallet_content {
+	padding: 5px;
+}
+
+.wallet-header {
+	width: 100%;
+	height: 22px;
+	padding: 3px 0 0 0;
+	background-color: #bfbfbf;
+	cursor: move;
+	border-radius: 10px 10px 0 0;
+}
+.wallet-inscription {
+	font-family: Arial;
+	font-size: 17px;
+	text-align: center;
+}
+
+.bill, .coin {
+	width: 110px;
+	padding: 10px;
+	margin: 5px;
+	background-color: #c18b70;
+	float: left;
+	overflow: hidden;
+	cursor: pointer;
+	border-radius: 10px;
+	font-family: Arial;
+	font-size: 15px;
+	text-align: center;
+}
+.bill .money-icon {
+	width: 100px;
+	height: 42px;
+	margin: 5px	;
+}
+
+.coin .money-icon {
+	width: 42px;
+	height: 42px;
+	margin: 5px auto;
+	background-position: bottom center;
+}
+
+.money-name {
+	margin: 5px 0 0 0;
+	display: block;
+}
+/*wallet (draggable) Ending*/
+
+.content {
+	width: 480px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.div-header {
+	margin: 5px;
+	font-size: 20px;
+	text-align: center;
+}
+
+#drinks {
+	width: 480px;
+	overflow: hidden;
+}
+
+.drink {
+	width: 90px;
+	padding: 10px;
+	margin: 5px;
+	background-color: #c18b70;
+	float: left;
+	overflow: hidden;
+	cursor: pointer;
+	border-radius: 10px;
+	font-family: Arial;
+	font-size: 15px;
+	text-align: center;
+}
+.coffee-icon {
+	width: 80px;
+	height: 80px;
+	margin: 5px	;
+}
+.coffee-name {
+	margin: 5px 0;
+	display: block;
+}
+.coffee-price {
+	margin: 5px 0 0 0;
+}
+
+#sugar {
+	width: 480px;
+	overflow: hidden;
+}
+
+#sugar-little, #sugar-middle, #sugar-many {
+	width: 130px;
+	padding: 10px;
+	margin: 5px;
+	background-color: #c18b70;
+	float: left;
+	cursor: pointer;
+	border-radius: 10px;
+	color: #fff;
+	font-size: 17px;
+	text-align: center;
+}
+
+#number-of-cups {
+	overflow: hidden;
+	display: none;
+}
+
+.number-of-cups-choose {
+	margin: 0 0 0 200px;
+	overflow: hidden;
+}
+
+#number-of-cups-value {
+	overflow: hidden;
+	float: left;
+	cursor: default;
+	font-size: 35px;
+}
+
+
+.right, .left {
+	width: 30px;
+	height: 30px;
+	margin-top: 4px;
+	background-size: cover;
+	float: left;
+	cursor: pointer;
+}
+.right {
+	background-image: url(../img/right.png);
+}
+.left {
+	background-image: url(../img/left.png);
+}
+
+#red-button {
+	width: 130px;
+	padding: 10px;
+	margin: 5px 165px;
+	background-color: #e52116;
+	float: left;
+	cursor: pointer;
+	border-radius: 10px;
+	color: #fff;
+	font-size: 17px;
+	text-align: center;
+}
+
+#order-name, #order-sum {
+	width: 100%;
+	height: 20px;
+	padding: 5px 0;
+	overflow: hidden;
+	text-align: center;
+
+}
+#pay {
+	display: none;
+	overflow: hidden;
+}
+#paid, #cash, #result {
+	margin: 5px;
+	text-align: center;
+}
